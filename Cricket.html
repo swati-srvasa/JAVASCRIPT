@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bat Bal Stump Game</h1>
+    <button onclick="Batrun('Bat')">Bat</button>
+    <button onclick="Ballrun('Ball')">Ball</button>
+    <button onclick="Stumprun('Stump')">Stump</button>
+<script>
+    function Batrun(userChoiceMsg)
+    {
+    // This below action will genrate random value between 0 to 3 
+    let randNumber=Math.random()*3;
+    let computerChoice;
+    let computerChoiceMsg;
+    if(randNumber>0 && randNumber<=1){
+        computerChoice='Bat';
+        computerChoiceMsg='Computer choice is Bat';
+    }
+    else if(randNumber>1 && randNumber<=2 )
+    {
+        computerChoice='Ball';
+        computerChoiceMsg='Computer choice is Ball';
+    }
+    else{
+        computerChoice='Stump';
+        computerChoiceMsg='Computer choice is Stump';
+    }
+let resultMsg;
+
+    if(computerChoice==='Bat')
+{
+    resultMsg=`Its's a tie`;
+}
+else if(computerChoice==='Ball')
+{
+    resultMsg='You won!';
+}
+else{
+    resultMsg='Computer won!';
+}
+alert(`Your choice is ${userChoiceMsg} and ${computerChoiceMsg} ${resultMsg}`);
+    }
+    function Ballrun(userChoiceMsg)
+    {
+    // This below action will genrate random value between 0 to 3 
+    let randNumber=Math.random()*3;
+    let computerChoice;
+    let computerChoiceMsg;
+    if(randNumber>0 && randNumber<=1){
+        computerChoice='Bat';
+        computerChoiceMsg='Computer choice is Bat';
+    }
+    else if(randNumber>1 && randNumber<=2 )
+    {
+        computerChoice='Ball';
+        computerChoiceMsg='Computer choice is Ball';
+    }
+    else{
+        computerChoice='Stump';
+        computerChoiceMsg='Computer choice is Stump';
+    }
+let resultMsg;
+
+    if(computerChoice==='Bat')
+{
+    resultMsg=`Computer won`;
+}
+else if(computerChoice==='Ball')
+{
+    resultMsg=`It's a tie!`;
+}
+else{
+    resultMsg='You won!';
+}
+alert(`Your choice is ${userChoiceMsg} and ${computerChoiceMsg} ${resultMsg}`);
+    }
+    function Stumprun(userChoiceMsg)
+    {
+    // This below action will genrate random value between 0 to 3 
+    let randNumber=Math.random()*3;
+    let computerChoice;
+    let computerChoiceMsg;
+    if(randNumber>0 && randNumber<=1){
+        computerChoice='Bat';
+        computerChoiceMsg='Computer choice is Bat';
+    }
+    else if(randNumber>1 && randNumber<=2 )
+    {
+        computerChoice='Ball';
+        computerChoiceMsg='Computer choice is Ball';
+    }
+    else{
+        computerChoice='Stump';
+        computerChoiceMsg='Computer choice is Stump';
+    }
+let resultMsg;
+
+    if(computerChoice==='Stump')
+{
+    resultMsg=`Its's a tie`;
+}
+else if(computerChoice==='Bat')
+{
+    resultMsg='You won!';
+}
+else{
+    resultMsg='Computer won!';
+}
+alert(`Your choice is ${userChoiceMsg} and ${computerChoiceMsg} ${resultMsg}`);
+    }
+</script>
+</body>
+</html>
