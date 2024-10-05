@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+        margin:0px;
+        padding:0px;
+        overflow:hidden;
+        }
+        body{
+            background-color: black;
+        }
+        #container{
+            height:600px;
+            width:450px;
+            border:5px outset aqua;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: space-around;
+            position: relative;
+            left: 542px;
+        }
+        h1{
+            color:white;
+            text-align: center;
+        }
+        input[type="text"]
+        {
+font-size:30px;
+        }
+        input{
+            height:40px;
+            width:360px;
+            border:none;
+        }
+        input:hover{
+            border:3px solid aqua;
+        }
+        .button{
+border:1px solid aqua;
+padding:40px;
+color:aqua;
+margin:5px 0px 0px 5px;
+border-radius: 25px;
+font-size:20px;
+font-weight: bold;
+font-family: 'Courier New', Courier, monospace;
+background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+
+    <div id="container">
+        <input type="text" id="display" readonly>
+        <button id="botton1" class="button" onclick="addValue('1')">1</button>
+        <button id="botton2" class="button" onclick="addValue('2')">2</button>
+        <button id="botton3" class="button" onclick="addValue('3')">3</button>
+        <button id="botton4" class="button" onclick="Clear()">C</button>
+        <button id="botton5" class="button" onclick="addValue('4')">4</button>
+        <button id="botton6" class="button" onclick="addValue('5')">5</button>
+        <button id="botton7" class="button" onclick="addValue('6')">6</button>
+        <button id="botton8" class="button" onclick="addValue('+')">+</button>
+        <button id="botton9" class="button" onclick="addValue('7')">7</button>
+        <button id="botton10" class="button" onclick="addValue('8')">8</button>
+        <button id="botton11" class="button" onclick="addValue('9')">9</button>
+        <button id="botton12" class="button" onclick="addValue('-')">-</button>
+        <button id="botton16" class="button" onclick="addValue('.')">.</button>
+        <button id="botton13" class="button" onclick="addValue('0')">0</button>
+        <button id="botton14" class="button" onclick="addValue('*')">*</button>
+        <button id="botton15" class="button" onclick="addValue('/')">/</button>
+        <button id="botton16" class="button" onclick="addValue('%')">%</button>
+
+
+    
+
+        <button id="botton16" class="button" onclick="calculate()">=</button>
+
+    </div>
+    <script>
+        function addValue(data){
+            document.querySelector('#display').value+=data;
+        }
+        function Clear(){
+            document.querySelector('#display').value=" ";
+        }
+        function calculate()
+        {
+            var val=document.querySelector('#display').value;
+            document.querySelector('#display').value=eval(val);
+
+        }
+        </script>
+</body>
+</html>
